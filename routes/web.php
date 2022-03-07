@@ -29,4 +29,5 @@ Route::get('createblog', [packageController::class, 'createblog']);
 Route::post('createblog', [packageController::class, 'blogdata'])->name('createblog');
 Route::get('faq', [packageController::class, 'faq']);
 Route::get('contactus', [packageController::class, 'contactus']);
+Route::post('filter', [packageController::class, 'filter'])->name('filter');
 

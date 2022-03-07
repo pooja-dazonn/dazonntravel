@@ -26,12 +26,12 @@
 			<div class="row banner-tour-booking">
 				<div class="col-sm-12">
 					<div class="hotel-booking-search travel-booking-search travel-booking-style_2">
-						<form name="hb-search-form" action="tours.html" id="tourBookingForm" method="GET">
+						<form name="hb-search-form" action="" id="tourBookingForm" method="GET">
 							<ul class="hb-form-table">
 								<li class="hb-form-field">
 									<label for="" class="desti">Destination</label>
 									<div class="hb-form-field-select">
-										<select name="tourtax[pa_destination">
+										<select name="">
 									  @foreach($list as $row)
 											<option value="0" disabled hidden selected>Where are you going?</option>
 											<option value="{{ $row->id }}"><a href="{{$row->id}}">{{ $row->Packagename }}</a></option>
@@ -56,7 +56,7 @@
 									</div>
 								</li>
 								<li class="hb-submit">
-									<button class="" type="submit">Search</button>
+									<button id="filterButton" class="" type="submit">Search</button>
 								</li>
 							</ul>
 							<input type="hidden" name="lang" value="">
@@ -1123,6 +1123,5 @@
 				</div>
 			</div>
 		</div>
-
-
+	
 		@endsection
