@@ -32,13 +32,15 @@
 									<label for="" class="desti">Destination</label>
 									<div class="hb-form-field-select">
 										<select name="tourtax[pa_destination">
+									  @foreach($list as $row)
 											<option value="0" disabled hidden selected>Where are you going?</option>
-											<option value="brazil">Brazil</option>
-											<option value="canada">Canada</option>
+											<option value="{{ $row->id }}"><a href="{{$row->id}}">{{ $row->Packagename }}</a></option>
+											<!-- <option value="canada">Canada</option>
 											<option value="cuba">Cuba</option>
 											<option value="usa">USA</option>
 											<option value="philippines">Philippines</option>
-											<option value="italy">Italy</option>
+											<option value="italy">Italy</option> -->
+											@endforeach
 										</select>
 									</div>
 

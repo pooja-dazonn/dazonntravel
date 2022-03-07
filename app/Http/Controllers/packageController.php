@@ -16,6 +16,7 @@ class packageController extends Controller
     );
        return view('userpanel/index', $data);
    }
+
    public function create()
    {
        return view('userpanel/create');
@@ -96,4 +97,19 @@ class packageController extends Controller
         
         return view('userpanel/contactus');
     }
+
+    public function filter(Request $request){
+        {
+            $Packagename =DB::table('populartours')->select('Packagename')->distinct()->get()->pluck('Packagename');
+            
+            $mprojectm =populartour::query();
+    
+            if ($request->filled('Packagename'))
+                {
+                    $mprojectm->where('Packagename',$request->Packagename);
+                }
+    
+            return read();
+            }
+        }
 }
