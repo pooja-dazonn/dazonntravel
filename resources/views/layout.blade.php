@@ -492,9 +492,10 @@
 	span.cmticon {
 		float: left;
 	}
+
 	#more {
-        display: none;
-    }
+		display: none;
+	}
 
 	/*faq page end */
 </style>
@@ -619,15 +620,15 @@
 					<nav class="width-navigation">
 						<ul class="nav navbar-nav menu-main-menu side-nav" id="mobile-demo" style="left: -250px;">
 							<li class="current-menu-ancestor current-menu-parent">
-								<a href="index.html">Home</a>
+								<a href="/">HOME</a>
 							</li>
 							<li class="menu-item-has-children">
-								<a href="tours.html">ABOUT US</a>
+								<a href="aboutus">ABOUT US</a>
 
 							</li>
 
 							<li><a href="faq">FAQ</a></li>
-							<li><a href="blog">Blog</a></li>
+							<li><a href="blog">BLOG</a></li>
 
 							<li class="menu-item-has-children">
 								<a href="#">FLIGHTS</a>
@@ -666,6 +667,8 @@
 		@yield('blogcontent')
 		@yield('faqcontent')<br>
 		@yield('contactuscontent')<br>
+		@yield('aboutuscontent')<br>
+		@yield('newblogcontent')<br>
 		<!-- footer strat -->
 		<div class="wrapper-footer wrapper-footer-newsletter" style="margin-bottom: 0px;">
 			<div class="main-top-footer">

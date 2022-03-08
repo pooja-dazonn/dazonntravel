@@ -33,15 +33,15 @@
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
-        <label>Product Name</label>
+        <label>blogtitle</label>
         <input type="text" class="form-control" name="blogtitle" required>
     </div>
     <div class="form-group">
-        <label>rate</label>
+        <label>blogtext</label>
         <input type="text" class="form-control" name="blogtext" required>
     </div>
     <div class="form-group">
-        <label>rate</label>
+        <label>buttomlink</label>
         <input type="text" class="form-control" name="buttonlink" required>
     </div>
    

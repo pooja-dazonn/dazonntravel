@@ -98,11 +98,27 @@ class packageController extends Controller
         
         return view('userpanel/contactus');
     }
+    public function aboutus()
+    {
+        return view('userpanel/aboutus');
+    }
+    public function blog2($id)
+    {
+       $row = DB::table('blogs')
+               ->where('id', $id)
+               ->first();
+               $post = ['Info' => $row
+    ];
+       return view('userpanel/blog2',$post);
+    }
 
-    public function filter($id){
-        {
-            $students = populartour::where('id', $id)->get();
-            return view('userpanel/dubai', $students);
-            }
-        }
+
+
+
+    // public function filter($id){
+        
+            
+    //         return view('userpanel/dubai');
+    //         }
+        
 }

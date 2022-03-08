@@ -51,7 +51,7 @@
                                         <div class="post-desciption">
                                             <p>{{$row->blogtext}}</p>
                                         </div>
-                                        <a class="btn-readmore" href="https://dazonntravels.com/how-to-book-cheap-flights-top-10-tricks/">Read More</a>
+                                        <a class="btn-readmore" href="blog2/{{$row->id}}">Read More</a>
                                     </div>
                                 </div>
                             
