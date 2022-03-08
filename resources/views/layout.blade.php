@@ -664,7 +664,7 @@
 
 
 		@yield('mainconttent')
-		@yield('blogcontent')
+		@yield('blogcontent')<br>
 		@yield('faqcontent')<br>
 		@yield('contactuscontent')<br>
 		@yield('aboutuscontent')<br>

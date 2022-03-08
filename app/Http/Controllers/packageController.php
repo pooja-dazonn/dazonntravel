@@ -54,12 +54,12 @@ class packageController extends Controller
     
 
     public function blog()
-    {
-        $data=array(
-            'list'=>DB::table('blogs')->get()
-        );
-        return view('userpanel/blog', $data);
+    {   
+        $datas=blog::all();
+        $datas=blog::paginate(2);
+        return view('userpanel/blog',['datas'=>$datas]);
     }
+  
     public function createblog()
     {
         

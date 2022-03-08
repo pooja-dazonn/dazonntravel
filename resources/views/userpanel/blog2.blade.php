@@ -440,6 +440,9 @@
 h4.text {
     width: 879px;
     text-align: justify;
+    line-height: inherit;
+    color: var(--grey-color, #5E6D77);
+    font-size: 18px;
 }
 </style>
 
