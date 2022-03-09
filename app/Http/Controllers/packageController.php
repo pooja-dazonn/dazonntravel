@@ -10,92 +10,90 @@ use App\Models\blog;
 
 class packageController extends Controller
 {
-   public function index ()
-   {
-    $data=array(
-        'list'=>DB::table('populartours')->get()
-    );
-       return view('userpanel/index', $data);
-   }
+    public function index()
+    {
+        $data = array(
+            'list' => DB::table('populartours')->get()
+        );
+        return view('userpanel/index', $data);
+    }
 
-   public function create()
-   {
-       return view('userpanel/create');
-   }
-   
-//    public function abc()
-//     {
-//         return view('userpanel/abc');
-//     }
+    public function create()
+    {
+        return view('userpanel/create');
+    }
+
+    //    public function abc()
+    //     {
+    //         return view('userpanel/abc');
+    //     }
 
     public function savedata(Request $request)
     {
         $add = new populartour();
-          $add->Packagename = $request->input('Packagename');
+        $add->Packagename = $request->input('Packagename');
         $add->Packagerate = $request->input('Packagerate');
         $add->Packagedays = $request->input('Packagedays');
-        $add->Packageitenery= $request->input('Packageitenery');
-       
-        if($request->hasfile('Packageimage'))
-        {
+        $add->Packageitenery = $request->input('Packageitenery');
+
+        if ($request->hasfile('Packageimage')) {
             $file = $request->file('Packageimage');
             $extention = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extention;
+            $filename = time() . '.' . $extention;
             $file->move('upload/images/', $filename);
             $add->Packageimage = $filename;
         }
         $add->save();
-        return redirect()->back()->with('status','Student Image Added Successfully');
+        return redirect()->back()->with('status', 'Student Image Added Successfully');
     }
     public function datetimepicker()
     {
         return view('userpanel/datetimepicker');
     }
-    
+
 
     public function blog()
-    {   
-        $datas=blog::all();
-        $datas=blog::paginate(2);
-        return view('userpanel/blog',['datas'=>$datas]);
+    {
+        $datas = blog::all();
+        $datas = blog::paginate(4);
+        return view('userpanel/blog', ['datas' => $datas]);
     }
-  
+
     public function createblog()
     {
-        
+
         return view('userpanel/createblog');
     }
     public function blogdata(Request $request)
     {
         $add = new blog();
-          $add->blogtitle = $request->input('blogtitle');
+        $add->blogtitle = $request->input('blogtitle');
         $add->blogtext = $request->input('blogtext');
         $add->buttonlink = $request->input('buttonlink');
-        
-     
-       
-        if($request->hasfile('blogimage'))
-        {
+
+
+
+        if ($request->hasfile('blogimage')) {
             $file = $request->file('blogimage');
             $extention = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extention;
+            $filename = time() . '.' . $extention;
             $file->move('upload/images/', $filename);
             $add->blogimage = $filename;
         }
         $add->save();
-        return redirect()->back()->with('status','Student Image Added Successfully');
+        return redirect()->back()->with('status', 'Student Image Added Successfully');
     }
 
     public function faq()
     {
-        $data=array(
-            'list'=>DB::table('faqs')->get()
-    );
+        $data = array(
+            'list' => DB::table('faqs')->get()
+        );
         return view('userpanel/faq', $data);
     }
     public function contactus()
     {
-        
+
         return view('userpanel/contactus');
     }
     public function aboutus()
@@ -104,21 +102,22 @@ class packageController extends Controller
     }
     public function blog2($id)
     {
-       $row = DB::table('blogs')
-               ->where('id', $id)
-               ->first();
-               $post = ['Info' => $row
-    ];
-       return view('userpanel/blog2',$post);
+        $row = DB::table('blogs')
+            ->where('id', $id)
+            ->first();
+        $post = [
+            'Info' => $row
+        ];
+        return view('userpanel/blog2', $post);
     }
 
 
 
 
     // public function filter($id){
-        
-            
+
+
     //         return view('userpanel/dubai');
     //         }
-        
+
 }

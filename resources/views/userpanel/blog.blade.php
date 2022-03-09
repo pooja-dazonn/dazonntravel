@@ -25,6 +25,16 @@
     .hide_content {
         display: none;
     }
+    .top_site_main .banner-wrapper .heading_primary {
+    margin: 0 0 10px 0;
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    margin-left: 514px;
+    font-size: xxx-large;
+    font-weight: 600;
+}
 </style>
 <div class="site wrapper-content">
     <div class="top_site_main" style="background-image: url(&quot;images/blogpage.jpg&quot;); padding-top: 500px;">
@@ -40,15 +50,12 @@
     </div>
     <section class="content-area">
         <div class="container">
-
             <div class="st-blog">
                 <div class="row">
                     @foreach($datas as $row)
                     <div class="col-sm-9 col-xs-12 ">
-
                         <div class="content">
                             <div class="blog-wrapper">
-
                                 <div class="article post post-13581 type-post status-publish format-standard has-post-thumbnail hentry category-flights">
                                     <div class="header">
                                         <header class="post-header">
@@ -71,8 +78,6 @@
                                                     <a href="https://dazonntravels.com/author/admin/">
                                                         <img alt="avatar" width="30" height="30" src="//i0.wp.com/dazonntravels.com/wp-content/uploads/bfi_thumb/Final_logo_2-3ef3e5ggaslkuncbromjgg.png" class="avatar avatar-96 photo origin round"><span> </a>
                                                 </li>
-                                               
- 
                                             </ul>
                                         </div>   -->
                                         <div class="post-desciption">
@@ -84,22 +89,16 @@
                                             </p>
                                         </div>
                                         <a class="btn-readmore" href="blog2/{{$row->id}}">Read More</a>
-
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                           @endforeach
-
-
                 </div>
             </div>
         </div>
     </section>
-
 </div>
 <nav class="pagination" role="navigation">
     <span class="page-number">{{$datas->links()}}</span>

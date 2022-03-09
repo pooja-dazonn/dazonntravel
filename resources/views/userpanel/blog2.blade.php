@@ -428,29 +428,32 @@
         background-color: red;
         float: left;
     }
+
     h2.page-description {
-    margin-left: 21%;
-    font-family: sans-serif;
-    text-align: justify;
-    width: 1105px;
-    font-size: xxx-large;
-    color: black;
-    font-weight: 700;
-}
-h4.text {
-    width: 879px;
-    text-align: justify;
-    line-height: inherit;
-    color: var(--grey-color, #5E6D77);
-    font-size: 18px;
-}
+        margin-left: 21%;
+        font-family: sans-serif;
+        text-align: justify;
+        width: 1105px;
+        font-size: xxx-large;
+        color: black;
+        font-weight: 700;
+    }
+
+    h4.text {
+        width: 879px;
+        text-align: justify;
+        line-height: inherit;
+        color: var(--grey-color, #5E6D77);
+        font-size: 18px;
+    }
 </style>
 
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="{{url('/')}}"> <img src="..\images\logo\final_logo_3.png" alt="Logo" class="images" width="130"></a>
+                <a href="{{url('/')}}"> 
+                    <img src="..\images\logo\final_logo_3.png" alt="Logo" class="images" width="130"></a>
             </div>
 
             <ul class="nav navbar-nav">
@@ -463,14 +466,14 @@ h4.text {
 
             </ul>
         </div>
-        <img src="..\images/blogpage.jpg" width="100%" height="850">
+        <img src="..\images\dazonn-travel-log.webp" width="100%" height="700">
     </nav>
     <div class="title">
 
 
         <div class="vertical">
             <div class="main-header-content inner">
-                
+
                 <div class="entry-title-divider">
                     <span></span><span></span><span></span>
                 </div>
@@ -490,7 +493,7 @@ h4.text {
         <h4 class="text">{{$Info->blogtext}}</h4>
     </div>
 
-<br><br>
+    <br><br>
     <footer class="site-footer clearfix">
         <a href="#top" id="back-to-top" class="back-top"></a>
         <div class="text-center">

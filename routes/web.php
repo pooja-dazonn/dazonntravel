@@ -26,14 +26,10 @@ Route::get('datetimepicker', [packageController::class, 'datetimepicker']);
 // Route::get('abc', [packageController::class, 'abc']);
 Route::get('blog', [packageController::class, 'blog']);
 
-Route::get('blog2/{id}',[packageController::class,'blog2']);
+Route::get('blog2/{id}', [packageController::class, 'blog2']);
 Route::get('createblog', [packageController::class, 'createblog']);
 Route::post('createblog', [packageController::class, 'blogdata'])->name('createblog');
 Route::get('faq', [packageController::class, 'faq']);
 Route::get('contactus', [packageController::class, 'contactus']);
 Route::post('filter', [packageController::class, 'filter'])->name('filter');
 Route::get('abouttus', [packageController::class, 'aboutus']);
-
-
-
-
