@@ -452,7 +452,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="{{url('/')}}"> 
+                <a href="{{url('/')}}">
                     <img src="..\images\logo\final_logo_3.png" alt="Logo" class="images" width="130"></a>
             </div>
 

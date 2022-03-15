@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', 'blog')
 @section('blogcontent')
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <style>
     .pagination {
         display: inline-block;
@@ -25,16 +25,17 @@
     .hide_content {
         display: none;
     }
+
     .top_site_main .banner-wrapper .heading_primary {
-    margin: 0 0 10px 0;
-    color: inherit;
-    display: inline-block;
-    position: relative;
-    line-height: 1;
-    margin-left: 514px;
-    font-size: xxx-large;
-    font-weight: 600;
-}
+        margin: 0 0 10px 0;
+        color: inherit;
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        margin-left: 514px;
+        font-size: xxx-large;
+        font-weight: 600;
+    }
 </style>
 <div class="site wrapper-content">
     <div class="top_site_main" style="background-image: url(&quot;images/blogpage.jpg&quot;); padding-top: 500px;">
@@ -85,7 +86,7 @@
                                                 @if(strlen($row->blogtext)>200)
                                                 {{substr($row->blogtext,0,200)}}
                                                 <span class="read-more-content">{{substr($row->blogtext,200,strlen($row->blogtext))}}
-                                            @endif
+                                                    @endif
                                             </p>
                                         </div>
                                         <a class="btn-readmore" href="blog2/{{$row->id}}">Read More</a>
@@ -94,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                          @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -104,11 +105,9 @@
     <span class="page-number">{{$datas->links()}}</span>
 </nav>
 <script type="text/javascript">
-            // Hide the extra content initially:
-                        $('.read-more-content').addClass('hide_content')
-                        $('.read-more-show, .read-more-hide').removeClass('hide_content')
-             
-                        
-            </script>
+    // Hide the extra content initially:
+    $('.read-more-content').addClass('hide_content')
+    $('.read-more-show, .read-more-hide').removeClass('hide_content')
+</script>
 
 @endsection

@@ -32,7 +32,7 @@
 									<label for="" class="desti">Destination</label>
 									<div class="hb-form-field-select">
 										<select name="">
-									  @foreach($list as $row)
+											@foreach($list as $row)
 											<option value="0" disabled hidden selected>Where are you going?</option>
 											<option value="{{ $row->id }}"><a href="{{$row->id}}">{{ $row->Packagename }}</a></option>
 											<!-- <option value="canada">Canada</option>
@@ -1123,5 +1123,5 @@
 				</div>
 			</div>
 		</div>
-	
+
 		@endsection
